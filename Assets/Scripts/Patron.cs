@@ -31,7 +31,7 @@ public class Patron : MonoBehaviour
             point = points[i];
             Vector3 end = start + point;
 
-            Debug.DrawLine(start, end, Color.cyan);
+            Debug.DrawLine(start, end, Color.cyan); 
 
         }
         point = points[points.Length - 1];
