@@ -95,7 +95,7 @@ namespace TopDown.AI
         private void OnFinishPath() {
             switch (path.type) {
 
-                case PathType.loop:
+                case PathType.reset:
                     currentIndex = 0;
                     if (!path.isClosed)
                     {
@@ -105,7 +105,7 @@ namespace TopDown.AI
                     
                     break;
 
-                case PathType.reset:
+                case PathType.loop:
                     points.Reverse();
                     currentIndex = 0;
                     break;
