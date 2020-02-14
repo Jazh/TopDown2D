@@ -35,10 +35,10 @@ namespace TopDown
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1)) ;
-            Shoot(1);
-            if (Input.GetKeyDown(KeyCode.Alpha2)) ;
-            Shoot(2);
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            Shoot(ElementType.fire);
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            Shoot(ElementType.ice);
 
             if (Input.GetKeyDown(KeyCode.KeypadMinus))
             {
