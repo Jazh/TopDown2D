@@ -8,7 +8,7 @@ namespace TopDown {
     public class AttackView : MonoBehaviour
     {
 
-        public AttackModel model;
+        private AttackModel model;
 
         public void Awake()
         {
@@ -18,7 +18,7 @@ namespace TopDown {
         public void Start()
         {
             //model = GetComponent<AttackModel>();
-            UpdateIcon(model.currentAttack);
+            //UpdateIcon(model.currentAttack);
         }
 
         public void UpdateIcon(int type) {

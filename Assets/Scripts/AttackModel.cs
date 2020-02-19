@@ -30,7 +30,9 @@ namespace TopDown
                 return _currentAttack;
             }
             set {//Clamp limita un valor
-                currentAttack = Mathf.Clamp(currentAttack, 0, attacks.Count - 1);
+                //currentAttack = Mathf.Clamp(currentAttack, 0, attacks.Count - 1);
+                _currentAttack = Mathf.Clamp(value, 0, attacks.Count - 1);
+                view.UpdateIcon(_currentAttack);
             }
         }
         //Awake se inicializa antes del start
@@ -56,7 +58,7 @@ namespace TopDown
                 sprites.Add(a.type, a.sprite);
             }
 
-
+            currentAttack = 0;
         }
 
 
