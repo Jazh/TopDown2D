@@ -980,9 +980,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textList:
-  - 
-  - 
-  - 
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  - Aliquam sit amet lacus in dolor cursus luctus.
+  - Quisque quis lectus semper ipsum fermentum malesuada vitae vitae justo.
   facesList:
   - {fileID: 21300000, guid: f0941401f4290dc44b5cae0a512a7466, type: 3}
   - {fileID: 21300000, guid: 0938ac1d8d4843941b7bd953f05265d0, type: 3}
@@ -1009,6 +1009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f31655f95a4186429ead33006466392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextDialogId: -1
 --- !u!4 &796561616
 Transform:
   m_ObjectHideFlags: 0
@@ -1306,6 +1307,8 @@ GameObject:
   - component: {fileID: 1225093999}
   - component: {fileID: 1225093998}
   - component: {fileID: 1225093997}
+  - component: {fileID: 1225094000}
+  - component: {fileID: 1225094001}
   m_Layer: 0
   m_Name: 7_3
   m_TagString: Untagged
@@ -1434,6 +1437,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 071116b80cdee1b4788a32ad31e20760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1225094000
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225093993}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1225094001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225093993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aca57930ab4b51a4288b674252508bc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1496130225
@@ -1648,7 +1689,7 @@ GameObject:
   - component: {fileID: 1560522094}
   m_Layer: 0
   m_Name: dog_0
-  m_TagString: Player
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1797,7 +1838,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.014210939, y: -0.04263258}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1808,7 +1849,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.625}
+  m_Size: {x: 1.4605441, y: 1.506074}
   m_EdgeRadius: 0
 --- !u!1 &1897815399
 GameObject:
