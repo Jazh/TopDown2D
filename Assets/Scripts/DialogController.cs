@@ -7,14 +7,27 @@ namespace TopDown {
     {
         static public DialogController instance;
 
-        static public void Show() {
+        static public void Show(int index)
+        {
             instance.ShowDialog();
+            instance.LoadDialog(index);
+        }
+
+        static public void Hide()
+        {
+            instance.HideDialog();
+        }
+
+        static public void Next()
+        {
+            instance.Next(instance.nextDialogId);
         }
 
         private DialogModel model;
         private DialogView view;
 
-
+        [SerializeField]
+        private int nextDialogId = -1;
 
         // Start is called before the first frame update
         void Awake()
@@ -52,9 +65,16 @@ namespace TopDown {
             //view.ShowText(model.textList[dialog.text]);
             //model.GetTextByDialogId(index);
             view.ShowText(model.GetTextByDialogId(index));
-            view.ShowFace();
+            view.ShowFace(model.GetFaceByDialogId(index));
+            view.ShowArrow(model.IsEndById(index));
+        }
+        private void Next(int index)
+        {
+            if (index >= 0)
+                LoadDialog(index);
+            else
+                HideDialog();
         }
 
-
-}
+    }
 }

@@ -5,10 +5,10 @@ using UnityEngine;
 namespace TopDown { 
 public class DialogModel : MonoBehaviour
 {
-        public List<string> textList = new List<string>() { 
-        "",
-        "",
-        ""
+        public List<string> textList = new List<string>() {
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Aliquam sit amet lacus in dolor cursus luctus.",
+            "Quisque quis lectus semper ipsum fermentum malesuada vitae vitae justo."
         };
 
         public List<Sprite> facesList;
@@ -39,15 +39,33 @@ public class DialogModel : MonoBehaviour
         
         }
 
-        public string GetFaceByDialogId(int id)
+        public Sprite GetFaceByDialogId(int id)
         {
             return GetFaceByDialog(dialogs[id]);
         }
 
-        public string GetFaceByDialog(Dialog d)
+        public Sprite GetFaceByDialog(Dialog d)
         {
-            return facesList[d.text];
+            return facesList[d.face];
+        }
+        public bool IsEndById(int id)
+        {
+            return IsEndByDialog(dialogs[id]);
+        }
 
+        public bool IsEndByDialog(Dialog d)
+        {
+            return (d.next == -1);
+        }
+
+        public int GetNextById(int id)
+        {
+            return GetNextByDialog(dialogs[id]);
+        }
+
+        public int GetNextByDialog(Dialog d)
+        {
+            return d.next;
         }
 
     }

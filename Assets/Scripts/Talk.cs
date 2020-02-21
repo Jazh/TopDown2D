@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace TopDown { 
 public class Talk : MonoBehaviour
 {
 
@@ -10,18 +11,25 @@ public class Talk : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E)) {
-            if (npc !=null) {
-                Debug.Log("");
+            if (npc != null) {
+                    DialogController.Show(0);
             }
         }
-    }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                if (npc != null)
+                    DialogController.Next();
+            }
+
+        }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -37,4 +45,5 @@ public class Talk : MonoBehaviour
             npc = null;
         }
     }
+}
 }

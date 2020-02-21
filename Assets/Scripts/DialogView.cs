@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace TopDown {
     public class DialogView : MonoBehaviour
@@ -23,12 +24,20 @@ namespace TopDown {
         }
 
         public void ShowText(string text) {
-            _model.dialog.Find("Text").GetComponent<Text>().text = text; ;
+            _model.dialog.Find("Text").GetComponent<Text>().text = text;
         }
 
-        public void ShowFace(Sprite face) {
-            _model.dialog.Find("face");
-            GetComponent<>
+        public void ShowFace(Sprite face)
+        {
+            _model.dialog.Find("Face-box/Face")
+                .GetComponent<Image>()
+                .sprite = face;
         }
-}
+
+        public void ShowArrow(bool finish)
+        {
+            _model.dialog.Find("Arrow").
+                gameObject.SetActive(!finish);
+        }
+    }
 }
